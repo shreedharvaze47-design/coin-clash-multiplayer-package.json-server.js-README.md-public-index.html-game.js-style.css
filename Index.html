@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coin Clash</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>🪙 COIN CLASH</h1>
+
+    <div id="menu">
+      <input id="name" placeholder="Your name">
+      <button id="create">Create Room</button>
+
+      <input id="code" placeholder="Room code">
+      <button id="join">Join Room</button>
+
+      <p id="message"></p>
+    </div>
+
+    <div id="game" class="hidden">
+      <h2>Room: <span id="roomCode"></span></h2>
+
+      <div class="info">
+        <span>⏱️ <b id="time">60</b></span>
+        <span>🏆 <b id="score">0</b></span>
+      </div>
+
+      <canvas id="board" width="900" height="520"></canvas>
+
+      <div class="controls">
+        <button id="up">⬆️</button>
+        <div>
+          <button id="left">⬅️</button>
+          <button id="down">⬇️</button>
+          <button id="right">➡️</button>
+        </div>
+      </div>
+
+      <p id="gameMessage"></p>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="game.js"></script>
+
+</body>
+</html>
